@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 
 public class No387 {
 	public static void main(String args[]){
-		String s="leetcode";
+		String s="LeetCode";
 		No387 n=new No387();
 		System.out.println(n.firstUniqChar(s));
 	}
