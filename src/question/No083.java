@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.ListNode;
+
 public class No083 {
 	public ListNode deleteDuplicates(ListNode head) {
 		if(head==null){

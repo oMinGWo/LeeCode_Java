@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.TreeNode;
+
 public class No110 {
 	public boolean isBalanced(TreeNode root) {
         if(root==null) return true;

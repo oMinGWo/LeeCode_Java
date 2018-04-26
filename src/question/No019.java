@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.ListNode;
+
 public class No019 {
 	
 	public static void main(String args[]) {

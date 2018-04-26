@@ -1,4 +1,4 @@
-package question;
+package extraClass;
 
 public class TreeNode {
 	int val;

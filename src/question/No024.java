@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.ListNode;
+
 public class No024 {
 	public ListNode swapPairs(ListNode head) {
 		if (head == null || head.next == null) {

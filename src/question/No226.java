@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.TreeNode;
+
 public class No226 {
 	public TreeNode invertTree(TreeNode root) {
         if(root==null)

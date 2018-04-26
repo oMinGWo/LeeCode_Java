@@ -1,9 +1,11 @@
 package question;
 
+import extraClass.TreeNode;
+
 import java.util.ArrayList;
 
 public class No129 {
-	//¹þ¹þ£¬¿´µ½ÎÒÁõÔÚÐ´£¬»ØÀ´Ö±½Ó¾ÍÐ´ºÃÁËhhh
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó¾ï¿½Ð´ï¿½ï¿½ï¿½ï¿½hhh
 	ArrayList<String> a=new ArrayList<String>();
 	public static void main(String args[]){
 		TreeNode a=new TreeNode(1);

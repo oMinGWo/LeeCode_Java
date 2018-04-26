@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.ListNode;
+
 public class No021 {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1==null){

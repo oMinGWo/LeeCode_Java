@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.ListNode;
+
 public class No160 {
 	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 		if(headA==null || headB==null) return null;

@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.TreeNode;
+
 public class No111 {
 	//TODO
 	public int minDepth(TreeNode root) {

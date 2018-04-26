@@ -1,4 +1,4 @@
-package question;
+package extraClass;
 
 import java.util.Stack;
 
@@ -18,7 +18,7 @@ public class MinStack {
     }
     
 	public void pop() {
-		//ÕâÀï±ØÐëÓÃequals£¬²»ÄÜÓÃ¡°==¡±
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½equalsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½==ï¿½ï¿½
 		if(s1.peek().equals(s2.peek()))
 			s2.pop();
 		s1.pop();

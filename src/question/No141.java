@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.ListNode;
+
 import java.util.HashMap;
 
 public class No141 {

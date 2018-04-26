@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.TreeNode;
+
 public class No104 {
 	public int maxDepth(TreeNode root) {
 		if(root==null){

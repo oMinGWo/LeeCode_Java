@@ -1,5 +1,7 @@
 package question;
 
+import extraClass.TreeNode;
+
 public class No112 {
 	public static void main(String args[]){
 		No112 n=new No112();

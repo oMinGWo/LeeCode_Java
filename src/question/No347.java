@@ -17,14 +17,13 @@ public class No347 {
             }
             map.put(t, f);
         }
-        //对hashmap的value 按照频率进行排序
         List<FEntity> values = new ArrayList<FEntity>();
         Set<Integer> keys = map.keySet();
         for(Integer key:keys){
             values.add(map.get(key));
         }
         Collections.sort(values);
-        //统计频率最高的k个数
+        //统锟斤拷频锟斤拷锟斤拷叩锟絢锟斤拷锟斤拷
         for(int i=0;i<k;i++){
             res.add(values.get(values.size()-1-i).num);
         }
