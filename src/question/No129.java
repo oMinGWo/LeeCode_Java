@@ -5,7 +5,6 @@ import extraClass.TreeNode;
 import java.util.ArrayList;
 
 public class No129 {
-	//����������������д������ֱ�Ӿ�д����hhh
 	ArrayList<String> a=new ArrayList<String>();
 	public static void main(String args[]){
 		TreeNode a=new TreeNode(1);
