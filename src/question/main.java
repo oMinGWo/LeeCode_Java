@@ -5,7 +5,8 @@ import extraClass.TreeNode;
 
 public class main {
     public static void main(String args[]){
-        No859 n = new No859();
-        System.out.println(n.buddyStrings("abcaa","abcbb"));
+        No896 n = new No896();
+        int[] a = {1,1,0};
+        System.out.println(n.isMonotonic(a));
     }
 }
