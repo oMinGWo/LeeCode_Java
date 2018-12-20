@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class No190 {
 	public int reverseBits(int n) {
+	    //TODO
         String s=Integer.toBinaryString(n);
         String t="";
         Stack<Character> stack=new Stack();
@@ -13,6 +14,6 @@ public class No190 {
         while(!stack.isEmpty()){
         	t=t+stack.pop();
         }
-		return Integer.parseInt(t,2);
+		return (int)Long.parseLong(t,2);
     }
 }
