@@ -1,6 +1,6 @@
 package question;
 
-public class No64 {
+public class No064 {
     public int minPathSum(int[][] grid) {
         //6ms
         //感觉这也是个DP思路的题目，不过很遗憾，我用的是小学奥数的知识

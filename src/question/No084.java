@@ -2,7 +2,7 @@ package question;
 
 import java.util.Stack;
 
-public class No84 {
+public class No084 {
     //尝试使用单调栈解决
     //一直困在的地方是，记得在数组的最后多加一个0用于比较，不然最后一个数字不会被算进去计算面积
     public int largestRectangleArea2(int[] heights) {

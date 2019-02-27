@@ -5,7 +5,7 @@ import extraClass.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class No98 {
+public class No098 {
     //敲黑板： 二叉搜索树的中序遍历是递增的，这两个是充分必要条件，可以互相验证！
     List<Integer> list = new ArrayList<>();
     public boolean isValidBST(TreeNode root) {
