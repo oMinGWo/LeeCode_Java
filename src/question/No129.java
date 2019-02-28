@@ -5,45 +5,23 @@ import extraClass.TreeNode;
 import java.util.ArrayList;
 
 public class No129 {
-	ArrayList<String> a=new ArrayList<String>();
-	public static void main(String args[]){
-		TreeNode a=new TreeNode(1);
-		a.left=new TreeNode(2);
-		a.right=new TreeNode(3);
-		No129 n=new No129();
-		int re=n.sumNumbers(a);
-		System.out.println(Integer.parseInt("012"));
-	}
+	int result = 0;
 	public int sumNumbers(TreeNode root) {
-		if(root.left==null && root.right==null) 
-			return root.val;
-		else if(root.left==null && root.right!=null){
-			help(root.right,root.val+"");	
-		}else if(root.left!=null && root.right==null){
-			help(root.left,root.val+"");
-		}else{
-			help(root.left,root.val+"");
-			help(root.right,root.val+"");
-        }
-		int sum=0;
-		for(String i:a){
-			int x=Integer.parseInt(i);
-			sum+=x;
+		if (root==null){
+			return 0;
 		}
-		return sum;
-    }
-	
-	public void help(TreeNode t,String s){
-		if(t.left==null && t.right==null){
-			a.add(s+t.val);
+		help(root,0);
+		return result;
+	}
+	private void help(TreeNode t, int sum){
+		if (t==null){
 			return;
-		}else if(t.left==null && t.right!=null){
-			help(t.right,s+t.val);
-		}else if(t.left!=null && t.right==null){
-			help(t.right,s+t.val);
-		}else{
-			help(t.left,s+t.val);
-			help(t.right,s+t.val);
-        }
+		}
+		if (t.left==null && t.right==null){
+			int x = sum * 10 + t.val;
+			result+=x;
+		}
+		help(t.left, sum * 10 + t.val);
+		help(t.right, sum * 10 + t.val);
 	}
 }

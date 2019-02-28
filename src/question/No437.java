@@ -3,18 +3,24 @@ package question;
 import extraClass.TreeNode;
 
 public class No437 {
-    //TODO
+    int result = 0;
     public int pathSum(TreeNode root, int sum) {
-        if (root == null){
-            return 0;
-        }
-        return help(root,sum) + help(root.left,sum) + help(root.right,sum);
-    }
-    private int help(TreeNode root,int sum){
         if (root==null){
-            return 0;
+            return result;
         }
-        return (root.val==sum?1:0) + help(root.left,sum - root.val) + help(root.right,sum - root.val);
+        help(root,sum);
+        pathSum(root.left,sum);
+        pathSum(root.right,sum);
+        return result;
     }
-
+    private void help(TreeNode root, int sum){
+        if (root==null){
+            return;
+        }
+        if (root.val == sum){
+            result++;
+        }
+        help(root.left, sum - root.val);
+        help(root.right, sum - root.val);
+    }
 }
