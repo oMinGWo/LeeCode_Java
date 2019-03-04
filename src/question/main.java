@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 
 public class main {
     public static void main(String args[]){
-        No257 n = new No257();
+        //Prepare data
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
@@ -26,6 +26,9 @@ public class main {
         int[] inorder = {3,2,1};
         int[] postorder = {3,2,1};
         String s = "loveleetcode";
-        System.out.println(n.binaryTreePaths(root));
+        int[] x = {7,6,4,3,1};
+
+        No121 n = new No121();
+        System.out.println(n.maxProfit(x));
     }
 }
