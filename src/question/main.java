@@ -26,9 +26,9 @@ public class main {
         int[] inorder = {3,2,1};
         int[] postorder = {3,2,1};
         String s = "loveleetcode";
-        int[] x = {7,6,4,3,1};
+        int[] x = {1,2,3,0,2};
 
-        No121 n = new No121();
+        No309 n = new No309();
         System.out.println(n.maxProfit(x));
     }
 }
