@@ -12,8 +12,7 @@ public class No077 {
 
     private void help(int n,int index,int k,List<Integer> list) {
         if (list.size() == k) {
-            List<Integer> a = new ArrayList<>();
-            a.addAll(list);
+            List<Integer> a = new ArrayList<>(list);
             result.add(a);
             return;
         }
