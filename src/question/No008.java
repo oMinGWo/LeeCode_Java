@@ -34,8 +34,9 @@ public class No008 {
 		try{
 			result=Integer.parseInt(re);
 		}catch(Exception e){
-			if(flag==-1)
+			if(flag==-1) {
 				return Integer.MIN_VALUE;
+			}
 			return Integer.MAX_VALUE;
 		}
 		

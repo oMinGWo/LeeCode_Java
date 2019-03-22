@@ -12,7 +12,12 @@ public class main {
         String[] s = {"catg","ctaagt","gcta","ttca","atgcatc"};
         int[] x = {1,1,8,1,8};
 
-        No996 n = new No996();
-        System.out.println(n.numSquarefulPerms(x));
+        No671 n = new No671();
+        TreeNode root=new TreeNode(2);
+        root.left=new TreeNode(2);
+        root.right=new TreeNode(5);
+        root.right.right=new TreeNode(7);
+        root.right.left=new TreeNode(5);
+        System.out.println(n.findSecondMinimumValue(root));
     }
 }

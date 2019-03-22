@@ -56,4 +56,19 @@ public class No235 {
             return left;
         }
     }
+
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q){
+        if (root==null){
+            return null;
+        }
+        int larger = Math.max(p.val,q.val);
+        int smaller = Math.min(p.val, q.val);
+        if (root.val<=larger && root.val>=smaller){
+            return root;
+        }else if (root.val<smaller){
+            return lowestCommonAncestor2(root.right, p,q);
+        }else {
+            return lowestCommonAncestor2(root.left, p,q);
+        }
+    }
 }
