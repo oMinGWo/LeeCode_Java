@@ -2,8 +2,6 @@ package question;
 
 import extraClass.TreeNode;
 
-import java.util.HashMap;
-
 public class No687 {
     //like No124 && No543
     int result = Integer.MIN_VALUE;

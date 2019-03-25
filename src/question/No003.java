@@ -3,6 +3,7 @@ package question;
 import java.util.HashSet;
 
 public class No003 {
+	//最长无重复子串
 	public int lengthOfLongestSubstring(String s) {
 		if (s.length() == 0 || s == null) {
 			return 0;

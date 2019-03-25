@@ -1,9 +1,15 @@
 package question;
 
+import java.util.Arrays;
+
 public class No383 {
 	public boolean canConstruct(String ransomNote, String magazine) {
-        if(ransomNote.equals("")) return true;
-        if(magazine.length()<ransomNote.length()) return false;
+        if(ransomNote.equals("")) {
+			return true;
+		}
+        if(magazine.length()<ransomNote.length()) {
+			return false;
+		}
 		char[] x=ransomNote.toCharArray();
 		char[] y=magazine.toCharArray();
 		for(char i:x){
@@ -15,7 +21,9 @@ public class No383 {
 					break;
 				}
 			}
-			if(key==0) return false;
+			if(key==0) {
+				return false;
+			}
 		}
 		return true;
     }

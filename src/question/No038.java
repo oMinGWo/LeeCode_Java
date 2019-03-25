@@ -2,30 +2,35 @@ package question;
 
 public class No038 {
 	public String countAndSay(int n) {
-		String re="1";
-		int i=1;
-		while(i<n){
-			re=help(re);
-			i++;
+		if(n==1){
+			return "1";
 		}
-		return re;
-    }
-	
-	public String help(String s){
-		char tmp=s.charAt(0);
-		int num=1;
-		String re="";
-		for(int i=1;i<s.length();i++){
-			if(s.charAt(i)==tmp){
-				num++;
-				continue;
+		int pos=1;
+		String lastStr="1";
+		StringBuilder sb=new StringBuilder();
+		while(pos<n){
+			char[] chars=lastStr.toCharArray();
+			int count=0;
+			char newChar='*';
+			for(int i=0;i<chars.length;++i){
+				if(newChar=='*'){
+					newChar=chars[i];
+					count=1;
+				}else if(newChar==chars[i]){
+					count++;
+				}else if(newChar!=chars[i]){
+					sb.append(count).append(newChar);
+					count=1;
+					newChar=chars[i];
+				}
 			}
-			re=re+num+tmp;
-			tmp=s.charAt(i);
-			num=1;
+			if(newChar!='*'){
+				sb.append(count).append(newChar);
+			}
+			pos++;
+			lastStr=sb.toString();
+			sb=new StringBuilder();
 		}
-		re=re+num+tmp;
-		return re;
-	}
-	
+		return lastStr;
+    }
 }
