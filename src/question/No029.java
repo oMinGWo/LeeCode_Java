@@ -1,29 +1,29 @@
 package question;
 
 public class No029 {
-	//TODO
     public int divide(int dividend, int divisor) {
-        if(divisor==0){
-        	return Integer.MAX_VALUE;
-        }else if(dividend==0){
-        	return 0;
+        if (dividend == 0) {
+            return 0;
         }
-        boolean isNegative=dividend*divisor>0?false:true;
-        long a=Math.abs(dividend);
-        long b=Math.abs(divisor);
-        int result=0;
-        int count=0;
-        while(a>=b){
-        	count=1;
-        	b=Math.abs(divisor);
-        	long sum=b;
-        	while(sum+sum<=a){
-        		sum=sum+sum;
-        		count=count+count;
-        	}
-        	a=a-sum;
-        	result+=count;
+        if (dividend == Integer.MIN_VALUE && divisor == -1) {
+            return Integer.MAX_VALUE;
         }
-        return isNegative?0-result:result;
+        boolean negative;
+        //用异或来计算是否符号相异
+        negative = (dividend ^ divisor) <0;
+        long t = Math.abs((long) dividend);
+        long d= Math.abs((long) divisor);
+        int result = 0;
+        for (int i=31; i>=0;i--) {
+            //找出足够大的数2^n*divisor
+            if ((t>>i)>=d) {
+                //将结果加上2^n
+                result+=1<<i;
+                //将被除数减去2^n*divisor
+                t-=d<<i;
+            }
+        }
+        //符号相异取反
+        return negative ? -result : result;
     }
 }

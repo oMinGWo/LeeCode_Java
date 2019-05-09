@@ -2,11 +2,9 @@ package question;
 
 import java.util.Arrays;
 
-public class No475 {
-
+public class No322 {
     //TODO
-    public int findRadius(int[] houses, int[] heaters) {
-
+    public int coinChange(int[] coins, int amount) {
         return -1;
     }
 }
