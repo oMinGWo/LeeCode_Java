@@ -17,9 +17,10 @@ public class main {
         l1.next=l2;
         l2.next=l3;
         l3.next=l4;
-        No322 n = new No322();
-        int[] x = {186,419,83,408};
-        int[][] y={{1,0},{-3,1},{-4,0},{2,3}};
-        System.out.println(n.coinChange(x, 6249));
+        No045 n = new No045();
+        int[] x = {2,3,1,1,4};
+        int[] y = {10,20,30,40,50};
+        int[] z = {4,5,6,7,8,9,10};
+        System.out.println(n.jump(x));
     }
 }
