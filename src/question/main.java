@@ -3,9 +3,7 @@ package question;
 import extraClass.ListNode;
 import extraClass.TreeNode;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 public class main {
     public static void main(String args[]){
@@ -17,10 +15,10 @@ public class main {
         l1.next=l2;
         l2.next=l3;
         l3.next=l4;
-        No045 n = new No045();
-        int[] x = {2,3,1,1,4};
+        No035 n = new No035();
+        int[] x = {3,5,7,9,10};
         int[] y = {10,20,30,40,50};
         int[] z = {4,5,6,7,8,9,10};
-        System.out.println(n.jump(x));
+        System.out.println(n.searchInsert(x,8));
     }
 }
