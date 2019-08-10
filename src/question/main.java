@@ -17,10 +17,12 @@ public class main {
         l1.next=l2;
         l2.next=l3;
         l3.next=l4;
-        No045 n = new No045();
+        No110 n = new No110();
         int[] x = {2,3,1,1,4};
         int[] y = {10,20,30,40,50};
         int[] z = {4,5,6,7,8,9,10};
-        System.out.println(n.jump(x));
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        System.out.println(n.isBalanced(root));
     }
 }
