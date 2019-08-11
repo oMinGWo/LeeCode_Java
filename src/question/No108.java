@@ -4,16 +4,16 @@ import extraClass.TreeNode;
 
 public class No108 {
     public TreeNode sortedArrayToBST(int[] nums) {
-        return t(nums,0,nums.length-1);
+        return help(nums, 0, nums.length-1);
     }
-    private TreeNode t(int[] nums,int start,int end){
-        if (start==end){
+    private TreeNode help(int[] nums, int low, int high){
+        if(low>high){
             return null;
         }
-        int middle = (start+end)/2;
-        TreeNode root = new TreeNode(nums[middle]);
-        root.left = t(nums,start,middle);
-        root.right = t(nums,middle+1,end);
+        int mid = (low+high)/2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = help(nums,low,mid-1);
+        root.right = help(nums, mid+1,high);
         return root;
     }
 }
