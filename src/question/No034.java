@@ -9,42 +9,40 @@ public class No034 {
         re[1]=right;
         return re;
     }
-
-    private int helpLeft(int[] nums, int low, int high, int target){
-        if(low>high){
+    private static int helpLeft(int[] nums, int low, int high, int target){
+        if (low > high){
             return -1;
         }
-        int mid=(low+high)/2;
-        if(nums[mid]==target){
-            if(mid-1<low || nums[mid]>nums[mid-1]){
+        int mid = (low+high)/2;
+        if (target == nums[mid]){
+            if (mid == low || nums[mid]>nums[mid-1]){
                 return mid;
             }else{
-                high=mid-1;
+                high = mid - 1;
             }
-        }else if(nums[mid]<target){
-            low=mid+1;
+        }else if (target > nums[mid]){
+            low = mid + 1;
         }else {
-            high=mid-1;
+            high = mid - 1;
         }
         return helpLeft(nums, low, high, target);
     }
-
-    private int helpRight(int[] nums, int low, int high, int target){
-        if(low>high){
+    private static int helpRight(int[] nums, int low, int high, int target){
+        if (low > high){
             return -1;
         }
-        int mid=(low+high)/2;
-        if(nums[mid]==target){
-            if(mid+1>=nums.length || nums[mid]<nums[mid+1]){
+        int mid = (low+high)/2;
+        if (target == nums[mid]){
+            if (mid == high || nums[mid]<nums[mid+1]){
                 return mid;
-            }else {
-                low=mid+1;
+            }else{
+                low = mid + 1;
             }
-        }else if(nums[mid]<target){
-            low=mid+1;
+        }else if (target > nums[mid]){
+            low = mid + 1;
         }else {
-            high=mid-1;
+            high = mid - 1;
         }
-        return helpRight(nums,low,high,target);
+        return helpRight(nums, low, high, target);
     }
 }

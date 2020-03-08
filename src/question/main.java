@@ -15,10 +15,10 @@ public class main {
         l1.next=l2;
         l2.next=l3;
         l3.next=l4;
-        No035 n = new No035();
-        int[] x = {3,5,7,9,10};
+        No069 n = new No069();
+        int[] x = {3,5,7,7,8,8,9,10};
         int[] y = {10,20,30,40,50};
         int[] z = {4,5,6,7,8,9,10};
-        System.out.println(n.searchInsert(x,8));
+        System.out.println(n.mySqrt(8));
     }
 }
